@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
-
-    <h1 class="titulo-index">Seja seu Compromisso</h1>
-    <p>Cadastre a sua dúvida, a sua frase ou uma dica.</p>
-    <p><a class="listagem" href="/alunos/lista">Clique aqui, para ver o que já está cadastrado!</a></p>
+    <h1 class="titulo-index"></h1>
+    <p></p>
+    <p><a class="listagem" href="/alunos/lista"></a></p>
     <p>{{sucesso}}</p>
 
+
+    {% block content %}
     <form action="/alunos/cadastro" method="post">
         {% csrf_token %}
         <label for="email">Email: </label>
@@ -23,5 +23,6 @@
 
         <input type="submit" id="botao" value="Enviar">
     </form>
-    <img class="imagem" src="{% static 'img/duvida.jpeg' %}" alt="">
-{% endblock %}
+    <img class="imagem" src="{% static 'pessoacomputador.jpeg' %}" alt="">
+    {% endblock %}
+
